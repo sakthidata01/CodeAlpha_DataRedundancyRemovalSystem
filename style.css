@@ -1,0 +1,1071 @@
+
+/* =========================================================
+   STUDENT MANAGER — OLIVE, WALNUT, AMBER & CREAM THEME
+   Updated reference-inspired styling
+   ========================================================= */
+
+:root {
+  --sage: #a3b18a;
+  --olive: #20260f;
+  --olive-light: #52632d;
+  --walnut: #5b3a29;
+  --amber: #e9a23b;
+  --cream: #f7f3e8;
+  --paper: #fffaf1;
+  --ink: #2c2117;
+  --soft-green: hsl(61, 57%, 86%);
+  --border-gold: #d6a04a;
+}
+
+
+/* =========================================================
+   STREAMLIT PAGE
+   ========================================================= */
+
+html,
+body,
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"],
+section[data-testid="stMain"] > div {
+  background: linear-gradient(
+    135deg,
+    #f4e4c6 0%,
+    #f7f3e8 48%,
+    #e9c88d 100%
+  ) !important;
+
+  color: var(--ink) !important;
+}
+
+[data-testid="stHeader"] {
+  background: transparent !important;
+}
+
+.block-container {
+  padding-top: 1.2rem;
+  padding-bottom: 4rem;
+  max-width: 1600px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--ink);
+}
+
+hr {
+  border-color: rgba(193, 139, 57, 0.35);
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+[data-testid="stSidebar"] {
+  background: linear-gradient(
+    180deg,
+    #20260f 0%,
+    #30270f 55%,
+    #5b3a29 100%
+  ) !important;
+
+  border-right: 2px solid var(--amber) !important;
+}
+
+[data-testid="stSidebar"] > div {
+  background: transparent !important;
+}
+
+[data-testid="stSidebar"] * {
+  color: #fff3df;
+}
+
+.brand-mark {
+  font-size: 3.8rem;
+  text-align: center;
+  padding: 1.1rem 0 0.2rem;
+  filter: drop-shadow(0 0 12px rgba(233, 162, 59, 0.65));
+}
+
+.brand-title {
+  text-align: center;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.05;
+  margin-bottom: 2rem;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] {
+  gap: 0.45rem;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] label {
+  border: 1px solid transparent;
+  border-radius: 14px;
+  padding: 0.65rem 0.8rem;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-testid="stSidebar"]
+[role="radiogroup"]
+label:has(input:checked) {
+  background: linear-gradient(
+    110deg,
+    #a3b18a,
+    #34491d
+  );
+
+  border-color: var(--amber);
+  box-shadow: 0 0 14px rgba(233, 162, 59, 0.4);
+}
+
+.sidebar-note {
+  margin-top: 2.5rem;
+  min-height: 190px;
+
+  border: 1px solid #b8792d;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(233, 162, 59, 0.12),
+    rgba(31, 43, 18, 0.8)
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+  padding: 1.1rem 0.5rem;
+  font-size: 1rem;
+}
+
+.book-art {
+  font-size: 3rem;
+  filter: drop-shadow(0 0 8px rgba(233, 162, 59, 0.7));
+}
+
+
+/* =========================================================
+   HERO HEADER
+   ========================================================= */
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.35rem;
+
+  border: 1px solid var(--amber);
+  border-radius: 20px;
+
+  background: linear-gradient(
+    105deg,
+    #20260f 0%,
+    #4b2e17 58%,
+    #8d5a23 100%
+  );
+
+  box-shadow:
+    0 8px 22px rgba(91, 58, 41, 0.2),
+    inset 0 1px 0 rgba(255, 225, 160, 0.45);
+
+  color: #fff0d3;
+}
+
+.hero-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 74px;
+
+  height: 74px;
+
+  border-radius: 50%;
+  border: 1px solid var(--amber);
+
+  background: rgba(233, 162, 59, 0.12);
+
+  font-size: 2.6rem;
+
+  filter: drop-shadow(
+    0 0 9px rgba(233, 162, 59, 0.55)
+  );
+}
+
+.hero-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero h1 {
+  color: #ffe7bd;
+  font-family: Georgia, serif;
+  font-size: clamp(1.45rem, 2.5vw, 2.45rem);
+  margin: 0;
+  line-height: 1.15;
+}
+
+.hero p {
+  color: #ffe7bd;
+  font-family: Georgia, serif;
+  font-size: clamp(1rem, 1.5vw, 1.45rem);
+  margin: 0.25rem 0 0;
+}
+
+.connection-pill {
+  flex: 0 0 auto;
+
+  padding: 0.65rem 0.9rem;
+
+  border: 1px solid #f3b94e;
+  border-radius: 13px;
+
+  background: rgba(30, 38, 14, 0.8);
+
+  box-shadow: 0 0 13px rgba(233, 162, 59, 0.5);
+
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff3df;
+}
+
+.connection-pill small {
+  font-size: 0.75rem;
+}
+
+
+/* =========================================================
+   DASHBOARD SUMMARY CARDS
+   ========================================================= */
+
+.stat-card {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 122px;
+  padding: 1rem 1.05rem;
+  margin-bottom: 1rem;
+
+  border: 1px solid var(--amber) !important;
+  border-radius: 18px !important;
+
+  color: #fff1d6;
+
+  box-shadow:
+    0 6px 16px rgba(44, 33, 23, 0.18),
+    inset 0 1px 0 rgba(255, 243, 223, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 22px rgba(44, 33, 23, 0.25);
+}
+
+.stat-card.green {
+  background: linear-gradient(
+    135deg,
+    #20260f,
+    #52632d
+  ) !important;
+}
+
+.stat-card.brown {
+  background: linear-gradient(
+    135deg,
+    #68401e,
+    #3b2819
+  ) !important;
+}
+
+.stat-card span {
+  float: left;
+  font-size: 2rem;
+  margin-right: 0.75rem;
+
+  filter: drop-shadow(
+    0 0 5px rgba(233, 162, 59, 0.45)
+  );
+}
+
+.stat-card p {
+  font-size: 0.9rem;
+  margin: 0.1rem 0 0.25rem;
+  color: #fff1d6;
+}
+
+.stat-card h2 {
+  color: #fff0d3;
+  font-family: Georgia, serif;
+  font-size: 1.9rem;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.section-heading,
+.records-heading {
+  font-family: Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  padding: 0.25rem 0 0.8rem;
+  color: #2e2115;
+}
+
+.records-heading {
+  margin-top: 1.2rem;
+  padding: 1rem 1.2rem;
+
+  border-radius: 16px 16px 0 0;
+  color: #fff0d3 !important;
+
+  background: linear-gradient(
+    100deg,
+    #20260f,
+    #5b3a29 70%,
+    #20260f
+  ) !important;
+
+  border: 1px solid var(--amber);
+}
+
+
+/* =========================================================
+   ADD STUDENT LAYOUT
+   Form, duplicate protection and illustration
+   ========================================================= */
+
+[data-testid="stHorizontalBlock"] {
+  align-items: stretch;
+}
+
+/* Student form panel */
+
+[data-testid="stForm"] {
+  background: rgba(255, 243, 223, 0.94) !important;
+
+  border: 1px solid #e9c58d !important;
+  border-radius: 18px !important;
+
+  padding: 1rem !important;
+  box-shadow: 0 4px 12px rgba(91, 58, 41, 0.06);
+}
+
+[data-testid="stVerticalBlockBorderWrapper"] {
+  border-color: rgba(192, 132, 47, 0.45) !important;
+  border-radius: 18px !important;
+}
+
+/* Form labels */
+
+.stTextInput label,
+.stSelectbox label,
+.stNumberInput label {
+  color: #352619 !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+}
+
+/* Compact name and email inputs */
+
+.stTextInput input {
+  min-height: 38px;
+
+  background: #fffaf1 !important;
+  color: #2c2117 !important;
+
+  border: 1px solid #e4cba6 !important;
+  border-radius: 10px !important;
+
+  box-shadow: none !important;
+  caret-color: #2c2117 !important;
+
+  font-size: 0.9rem !important;
+}
+
+.stTextInput input:focus {
+  border-color: #a3b18a !important;
+
+  box-shadow: 0 0 0 2px
+    rgba(163, 177, 138, 0.25) !important;
+}
+
+/* Department and academic-year controls */
+
+.stSelectbox [data-baseweb="select"] > div {
+  min-height: 38px;
+
+  background: #fffaf1 !important;
+  border-color: #e4cba6 !important;
+  border-radius: 10px !important;
+}
+
+.stSelectbox [data-baseweb="select"] input,
+.stSelectbox [data-baseweb="select"] div,
+.stSelectbox [data-baseweb="select"] span {
+  color: #2c2117 !important;
+}
+
+/* Buttons */
+
+.stFormSubmitButton button,
+.stButton button {
+  background: linear-gradient(
+    105deg,
+    #20260f,
+    #455a27
+  ) !important;
+
+  color: #fff3df !important;
+
+  border: 1px solid var(--amber) !important;
+  border-radius: 12px !important;
+
+  font-weight: 700 !important;
+
+  box-shadow: 0 3px 8px rgba(40, 48, 20, 0.15);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.stFormSubmitButton button:hover,
+.stButton button:hover {
+  color: #fff !important;
+  border-color: var(--amber) !important;
+
+  box-shadow: 0 0 12px
+    rgba(233, 162, 59, 0.45);
+
+  transform: translateY(-1px);
+}
+
+.stDownloadButton button {
+  background: linear-gradient(
+    105deg,
+    #68401e,
+    #8d5a23
+  ) !important;
+
+  color: #fff3df !important;
+
+  border: 1px solid var(--amber) !important;
+  border-radius: 10px !important;
+}
+
+
+/* =========================================================
+   DUPLICATE PROTECTION CARD
+   ========================================================= */
+
+.protection-card {
+  box-sizing: border-box;
+
+  min-height: 265px;
+  height: 100%;
+
+  padding: 1.2rem 1rem;
+  margin: 0 0 1rem;
+
+  border: 1px solid #b6c68b;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    145deg,
+    #eff0c8,
+    #e5e8b5
+  );
+
+  box-shadow: 0 5px 14px rgba(80, 93, 40, 0.1);
+
+  text-align: center;
+  color: #20260f;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.protection-card.compact {
+  min-height: 0;
+}
+
+.shield {
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+
+  filter: drop-shadow(
+    0 0 6px rgba(82, 99, 45, 0.25)
+  );
+}
+
+.protection-card h3 {
+  color: #20260f;
+  font-family: Georgia, serif;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin: 0.4rem 0 0.65rem;
+}
+
+.protection-card p {
+  color: #2b2c17;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.ornament {
+  color: #a05b1b;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+
+/* =========================================================
+   BOOK STACK + GRADUATION CAP ILLUSTRATION
+   Replaces the plain book placeholder
+   ========================================================= */
+
+.book-panel {
+  box-sizing: border-box;
+
+  min-height: 265px;
+  height: 100%;
+
+  width: 100%;
+  padding: 1rem;
+
+  border-radius: 18px;
+  border: 1px solid #d6a04a;
+
+  background: radial-gradient(
+    ellipse at center,
+    #fff0c8 0%,
+    #edcf91 75%,
+    #d8b16d 100%
+  );
+
+  box-shadow:
+    0 5px 14px rgba(91, 58, 41, 0.1),
+    inset 0 1px 0 rgba(255, 250, 241, 0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  text-align: center;
+}
+
+.book-illustration {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Graduation cap above the books */
+
+.graduation-cap {
+  font-size: clamp(2.8rem, 4vw, 4rem);
+  line-height: 1.1;
+
+  margin-bottom: 0.6rem;
+
+  filter: drop-shadow(
+    0 5px 5px rgba(73, 43, 12, 0.22)
+  );
+
+  transform: rotate(-4deg);
+}
+
+/* Stack the three books vertically */
+
+.book-stack {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 4px;
+
+  margin: 0 auto 0.9rem;
+}
+
+/* Shared book styling */
+
+.book {
+  position: relative;
+
+  box-sizing: border-box;
+
+  width: min(100%, 170px);
+  height: 27px;
+
+  border: 1px solid rgba(91, 58, 41, 0.7);
+  border-left: 6px solid rgba(91, 58, 41, 0.65);
+
+  border-radius: 4px 9px 9px 4px;
+
+  box-shadow:
+    0 4px 5px rgba(60, 40, 20, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.25);
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-left: 9px;
+
+  transition: transform 0.2s ease;
+}
+
+.book span {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Green book */
+
+.book-green {
+  background: linear-gradient(
+    90deg,
+    #6c9946,
+    #9cc66b,
+    #c3df86
+  );
+
+  transform: translateX(-8px) rotate(-2deg);
+}
+
+/* Red / pink book */
+
+.book-red {
+  background: linear-gradient(
+    90deg,
+    #b93554,
+    #e65b79,
+    #f28ca0
+  );
+
+  transform: translateX(8px) rotate(1.5deg);
+}
+
+/* Blue book */
+
+.book-blue {
+  background: linear-gradient(
+    90deg,
+    #2181a8,
+    #319ec2,
+    #7ad5e9
+  );
+
+  transform: translateX(-2px) rotate(-1deg);
+}
+
+/* Subtle hover effect */
+
+.book-panel:hover .book-green {
+  transform: translateX(-12px) rotate(-3deg);
+}
+
+.book-panel:hover .book-red {
+  transform: translateX(12px) rotate(2deg);
+}
+
+.book-panel:hover .book-blue {
+  transform: translateX(-2px) rotate(0deg);
+}
+
+/* Illustration caption */
+
+.book-panel h3 {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.3;
+
+  margin: 0.25rem 0 0.35rem;
+
+  color: #4b2d14;
+}
+
+.book-panel p {
+  color: #68431d;
+  font-size: 0.78rem;
+  line-height: 1.4;
+
+  margin: 0;
+}
+
+/* Support the older illustration-card class too */
+
+.illustration-card {
+  min-height: 155px;
+
+  border-radius: 18px;
+  text-align: center;
+  padding: 1rem;
+
+  background: radial-gradient(
+    ellipse at center,
+    #fff0c8,
+    #edcf91 75%,
+    #d8b16d
+  );
+
+  border: 1px solid #d6a04a;
+}
+
+.illustration {
+  font-size: 4rem;
+
+  filter: drop-shadow(
+    0 4px 4px rgba(73, 43, 12, 0.2)
+  );
+}
+
+.illustration-card h3 {
+  font-family: Georgia, serif;
+  margin: 0;
+  color: #4b2d14;
+}
+
+.illustration-card p {
+  color: #68431d;
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   RECORDS TABLE
+   ========================================================= */
+
+[data-testid="stDataFrame"] {
+  border: 1px solid #c58a39;
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
+}
+
+/* Search field */
+
+[data-testid="stTextInput"] input::placeholder {
+  color: #8a7964 !important;
+  opacity: 1;
+}
+
+/* Alerts */
+
+[data-testid="stAlert"] {
+  border-radius: 12px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  position: relative;
+
+  text-align: center;
+
+  margin-top: 2rem;
+  padding: 1rem;
+
+  color: #fff0d3;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    100deg,
+    #20260f,
+    #68401e,
+    #20260f
+  );
+
+  border: 1px solid rgba(233, 162, 59, 0.65);
+
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE LAYOUT
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .hero {
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .hero-icon {
+    flex-basis: 58px;
+    height: 58px;
+    font-size: 2rem;
+  }
+
+  .connection-pill {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .stat-card {
+    min-height: 110px;
+    padding: 0.8rem;
+  }
+
+  .stat-card span {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .stat-card p {
+    font-size: 0.78rem;
+  }
+
+  .stat-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .protection-card,
+  .book-panel {
+    min-height: 240px;
+  }
+
+  .protection-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .protection-card p {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-wrap: wrap;
+  }
+
+  .hero-copy {
+    flex-basis: 60%;
+  }
+
+  .connection-pill {
+    margin-left: auto;
+  }
+
+  .book-panel {
+    min-height: 220px;
+  }
+
+  .protection-card {
+    min-height: 220px;
+  }
+
+  .book {
+    width: min(100%, 145px);
+  }
+}
+
+@media (max-width: 600px) {
+  .block-container {
+    padding-top: 0.7rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+
+  .hero {
+    padding: 0.9rem;
+    border-radius: 15px;
+  }
+
+  .hero-icon {
+    flex-basis: 48px;
+    height: 48px;
+    font-size: 1.7rem;
+  }
+
+  .hero-copy {
+    flex-basis: 100%;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .connection-pill {
+    margin-left: 0;
+  }
+
+  .section-heading,
+  .records-heading {
+    font-size: 1.2rem;
+  }
+
+  .book-panel,
+  .protection-card {
+    min-height: 210px;
+  }
+}
+
+/* ===== NEW BOOK ILLUSTRATION OVERRIDE ===== */
+
+.book-panel {
+    min-height: 300px !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 18px !important;
+    overflow: hidden !important;
+    background: radial-gradient(
+        ellipse at center,
+        #fff4d8 0%,
+        #f0d39a 70%,
+        #dfb86f 100%
+    ) !important;
+    border: 1px solid #d6a04a !important;
+    border-radius: 18px !important;
+}
+
+.book-illustration {
+    width: 100%;
+    text-align: center;
+}
+
+.cap-art {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 5px 5px rgba(50, 35, 15, 0.25));
+}
+
+.realistic-books {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.stack-book {
+    position: relative;
+    box-sizing: border-box;
+    width: min(190px, 90%);
+    height: 32px;
+    border: 1px solid rgba(72, 46, 25, 0.65);
+    border-left: 9px solid rgba(65, 45, 24, 0.6);
+    border-radius: 4px 8px 8px 4px;
+    box-shadow: 0 5px 5px rgba(68, 43, 18, 0.22);
+}
+
+.green-book {
+    background: linear-gradient(180deg, #b9df75, #6caa4d);
+    transform: translateX(-9px) rotate(-3deg);
+}
+
+.red-book {
+    background: linear-gradient(180deg, #ff9bb0, #c83c60);
+    transform: translateX(9px) rotate(2deg);
+}
+
+.blue-book {
+    background: linear-gradient(180deg, #78d7ee, #2389b2);
+    transform: translateX(-2px) rotate(-1deg);
+}
+
+.book-pages {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3px;
+    height: 4px;
+    background: #fff4d8;
+    border-top: 1px solid rgba(91, 58, 41, 0.25);
+}
+
+.book-caption h3 {
+    color: #4b2d14 !important;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    margin: 0 0 5px;
+}
+
+.book-caption p {
+    color: #68431d !important;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Remove bullet points from sidebar navigation */
+section[data-testid="stSidebar"] ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+section[data-testid="stSidebar"] li {
+    list-style: none !important;
+}
+
+/* Hide radio button circles but keep icons and text */
+section[data-testid="stSidebar"] div[role="radiogroup"] input {
+    display: none !important;
+}
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label > div:first-child {
+    display: none !important;
+}
+/* Remove bullets and radio circles from sidebar navigation */
+section[data-testid="stSidebar"] [data-testid="stRadio"] ul {
+    list-style: none !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stRadio"] li {
+    list-style: none !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stRadio"] label > div:first-child {
+    display: none !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stRadio"] label {
+    padding-left: 12px !important;
+}
+/* Student Records column borders */
+.st-key-records_table [data-testid="stHorizontalBlock"] > [data-testid="column"] {
+    border-right: 1px solid #5B4033;
+    padding-right: 8px;
+}
+
+.st-key-records_table [data-testid="stHorizontalBlock"] > [data-testid="column"]:last-child {
+    border-right: none;
+}
